@@ -14,10 +14,25 @@
     <script src="js/script.js"></script>
     
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    
+    <!--function for highlighting button -->
+    <script>    
+		function highlight()
+		{ 
+  		document.getElementById("tab-bar").style.color = blue;
+    	
+		}
+		
+	</script>
 
-
-    
+        
+    <script>    
+		function clickbutton()
+		{ 
+  		document.getElementById("new").style.color = blue;
+    	
+		}
+		
+	</script>
 </head>
 
 <body>
@@ -33,7 +48,7 @@
     </h1>
 	</div>
 
-<div class="flex-container" id="upper-container" onclick="switchChannel('#Yummy');" >
+<div class="flex-container" id="upper-container" onclick="switchChannel('#Yummy');">
   <div class="flex-item">#Yummy</div>
              
  
@@ -68,10 +83,10 @@
   
   <!-- for the buttons tab-bar -->
 </div>
-    <div class="flex-container" id="tab-bar">
-        <!-- #4 #tab-bar only selected channel should be #highlighted -->
+    <div class="flex-container" id="tab-bar" onclick="highlight();">
+        <!-- #4 #tab-bar - only selected channel should be #highlighted -->
         
-        <button> 
+        <button id="new" onclick="clickbutton();"> 
             <!-- #3 #tab-bar #images -->
             <img src="http://ip.lfe.mw.tum.de/sections/lightbulb-o.png" alt="Bulb">
             New
@@ -87,7 +102,8 @@
             <!-- #3 #tab-bar #images -->
             <img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="Star">
             Favorites
-		</button></div>
+		</button>
+		</div>
 
 	</div>
 	  <!-- #3 #chat #container -->
