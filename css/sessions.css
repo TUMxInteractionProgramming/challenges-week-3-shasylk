@@ -1,0 +1,257 @@
+
+/* #4 #global styles*/
+
+* {
+    /* #4 use #roboto #font */
+    font-family: 'Roboto', 'Arial', sans-serif;
+
+     /* #4 #sweat take care of #spacing between various elements */
+    margin: 0;
+    padding: 0;
+}
+body {
+	
+    background-color: #F5F5F5;
+}
+/*.flex-item {-webkit-align-self: center; align-self: center;}*/
+/* #4 # sweat #uppercase buttons and w3w locations */
+button, strong {
+    text-transform: uppercase;
+
+}
+/*split the screen using the flex container option- channels area positioning */
+/* outermost container on the left */
+.outer-flex-container
+{
+	display:flex;
+	overflow-y: scroll;
+	height: 100%;
+	background-color: lightgray;
+	width: 40%;
+	flex-direction: column;
+	float: left;
+	
+}
+/* #4 address first #app-bar s */
+h1 {
+    background-color: #3F51B5;
+    color: white;
+	height: 76px;
+	width: 100%;
+	
+}
+h1 img {
+    /* #4 #middle vertical alignment of icons in the #channels list */
+   
+	margin-left: 10px;
+	
+}
+/*h1 for the chat*/
+h1.new-header
+{
+	display: flex;
+	top: 0;
+	background-color: #3F51B5;
+    color: white;
+	height: 76px;
+	width: 100%;
+	
+	padding: 4px;
+	
+
+	
+}
+#channels
+{
+	display:flex;
+	padding: 16px 10px;
+
+
+}
+#top-container
+{
+	display: flex;
+	position: fixed;
+
+	
+}
+#top-containerright
+{
+	display: flex;
+   
+	
+}
+.flex-container {
+  display: flex;
+   height: 50px;
+	border: 4px;
+	border-color: black;
+ margin: 4px;
+	background-color: white;
+
+}
+.flex-item {
+  width: 100px;
+  height: 50px;
+  margin: 5px;
+
+}
+#upper-container {
+	margin-top: 70px;
+  justify-content: space-between;
+
+}
+
+#second-container {
+  justify-content: space-between;
+ 
+}
+#third-container {
+  justify-content: space-between;
+ 
+}
+#fourth-container {
+  justify-content: space-between;
+
+}
+#fifth-container {
+  justify-content: space-between;
+
+}
+
+/* #4 add styles to #tab-bar and #chat-bar #buttons */
+#tab-bar button {
+    background-color: white;
+    border: none;
+    font-size: 13px;
+	width: 33%;
+
+    padding: 16px;
+}
+
+/* #4 #tab-bar buttons do have a #line-break and images are centered due to the left&right auto margin */
+#tab-bar button img {
+    display: block;
+    margin: 0 auto 4px auto;
+}
+
+/* #4 the selected #tab-bar #button is #highlighted */
+#tab-bar button.selected {
+    color: #3F51B5;
+    border-bottom: 4px solid #3F51B5;
+}
+#tab-bar
+{
+	/* space buttons evenly and place buttons in flexbox*/
+
+  display: flex;
+  align-items:stretch;
+  height: auto;
+  width: 40%;
+  position: fixed;
+  bottom: 0;
+  justify-content: space-between;
+
+}
+/*New flexbox for chat column direction*/
+.right-flex-container
+{
+	display: flex;
+	float: right;
+	margin-left: 680px;
+   	position: fixed;
+	flex-direction: column;
+	height: 100%;
+	background-color: lightgray;
+	width: 60%;
+	overflow-y: scroll;
+	
+}
+#chat
+/*right flex container */
+{
+	display:flex;
+	height: 76px;
+	right: 0;
+	flex-direction: column;
+	margin-left: 5px;
+	position: relative;
+}
+
+/* MESSAGES */
+/* #4 select #specific #messages by class and re-assign element styles according to their #hierarchy in a nested way */
+.message {
+
+
+    /* #4 align all #messages using #margins */
+    /* #4 #message distance to next message container*/
+    margin-bottom: 8px;
+	margin-left: 2.5%;
+	height: 70px;
+	
+}
+
+
+.message h3 {
+    font-size: medium;
+}
+
+.message h3 em {
+    font-size: larger;
+    font-style: normal;
+	
+}
+
+.message h3 a {
+    /* #3 #chat #link color is primary text */
+    color: black;
+}
+
+.message p {
+    background-color: white;
+    /*padding: 16px;*/
+}
+
+.message button {
+    background-color: #CDDC39;
+    color: black;
+    text-transform: uppercase;
+	margin-right: 1px;
+}
+
+/* #4 left align own #messages using #margins */
+.message.own {
+  margin-left: 17.5%;
+	width: 100%;
+}
+
+
+#chat-bar {
+    margin-left: 5px;
+	background-color: white;
+	font-size: 28px;
+	height: 300px;
+	width: 300px;
+    border: #0B0B0B;
+	border-width: 4px;
+    padding: 16px;
+	position: relative;
+	display: block;
+	text-align: left;
+	overflow-y: scroll;
+	
+}
+#emojis
+{
+	background-color: white;
+	font-size: 28px;
+	height: 280px;
+	width: 280px;
+    border: #0B0B0B;
+	border-width: 2px;
+	border-color:black;
+    padding: 16px;
+	position: relative;
+	display: none;
+	
+}

@@ -1,98 +1,121 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
+    <!DOCTYPE html>
+	<html>
+	<head>
+   <meta charset="UTF-8">
     <title>chatter|app</title>
 
     <!-- #4 embed the #roboto #font. This needs to go above your css -->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
 
     <!-- #4 #sweat out the styles by creating an #external css -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/sessions.css" />
+    
+    <!-- javascript-->
+    <script src="js/script.js"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    
+ 
 
     
 </head>
+
 <body>
-<!-- #4 #one #page -->
-<div id="channels">
-    <h1>
+     
+		
+<div class="outer-flex-container">
+<!--Left App Bar - -->
+
+<div class="top-container" id="channels">
+    <h1 style="position:fixed;">
         <!-- #3 #channels #moocus the talkative duck-->
-        <img src="http://ip.lfe.mw.tum.de/sections/moocus.png" alt="Moocus, the chatty duck!" style="height: 56px;">
-        chatter|app
+        <img style="vertical-align: middle;" src="http://ip.lfe.mw.tum.de/sections/moocus.png" alt="Moocus, the chatty duck!" height="76px"> chatter|app  
     </h1>
+	</div>
 
-    <!-- #3 #channels #list is much better, than headlines or paragraphs... -->
-    <ul>
-        <li>#Yummy
-            <!-- #3 #channels #favorite this is not starred -->
-            <img src="http://ip.lfe.mw.tum.de/sections/star-o.png" alt="not starred">
-        </li>
+<div class="flex-container" id="upper-container" onclick="getElementById('.new-header').innerHTML=switchChannel('#Yummy');">
+  <div class="flex-item">#Yummy</div>
+             
+ 
+  <div class="flex-item"><img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="starred">&#x3E;</div>
+	</div>
+	
+<div class="flex-container" id="second-container" onclick="getElementById('new-header').innerHTML=switchChannel('#SevenContinents');">
+  <div class="flex-item">#SevenContinents</div>
+          
+  
+   <div class="flex-item"><img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="starred">&#x3E;</div>
+	
+</div>
+<div class="flex-container" id="third-container" onclick="getElementById('new-header').innerHTML=switchChannel('#KillerApp');">
+  <div class="flex-item">#KillerApp</div>
+             
+  
+    <div class="flex-item"><img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="starred">&#x3E;</div>
 
-        <!-- #4 #channel is #highlighted -->
-        <li class="selected">
-            #SevenContinents
-            <!-- #3 #channels #favorite this is starred -->
-            <img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="starred">
-        </li>
-        <li>#KillerApp
-            <!-- #3 #channels #favorite this is not starred -->
-            <img src="http://ip.lfe.mw.tum.de/sections/star-o.png" alt="not starred">
-        </li>
-        <li>#FirstPersonOnMars
-            <!-- #3 #channels #favorite this is starred -->
-            <img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="starred">
-        </li>
-        <li>#Octoberfest
-            <!-- #3 #channels #favorite this is not starred -->
-            <img src="http://ip.lfe.mw.tum.de/sections/star-o.png" alt="not starred">
-        </li>
-    </ul>
-
-    <!-- #3 #tab-bar #container -->
-    <!-- #4 #sweat #tab-bar -->
-    <div id="tab-bar">
+</div>	
+<div class="flex-container" id="fourth-container" onclick="getElementById('new-header').innerHTML=switchChannel('#FirstPersonOnMars');">
+  <div class="flex-item">#FirstPersonOnMars</div>
+             
+  
+  <div class="flex-item"><img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="starred">&#x3E;</div>
+</div>	
+<div class="flex-container" id="fifth-container" onclick="getElementById('new-header').innerHTML=switchChannel('#Octoberfest');">
+  <div class="flex-item">#Octoberfest</div>
+             
+  
+  <div class="flex-item"><img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="starred">&#x3E;</div>
+  
+  <!-- for the buttons tab-bar -->
+</div>
+    <div class="flex-container" id="tab-bar">
         <!-- #4 #tab-bar selected channel should be #highlighted -->
+        
         <button class="selected">
             <!-- #3 #tab-bar #images -->
             <img src="http://ip.lfe.mw.tum.de/sections/lightbulb-o.png" alt="Bulb">
             New
         </button>
+		
         <button>
             <!-- #3 #tab-bar #images -->
             <img src="http://ip.lfe.mw.tum.de/sections/fire.png" alt="Hot">
             Trending
-        </button>
-        <button>
+		   </button>
+        
+           <button>
             <!-- #3 #tab-bar #images -->
             <img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="Star">
             Favorites
-        </button>
-    </div>
-</div>
+		</button></div>
 
-<!-- #4 #one #page -->
-<div id="chat">
-    <h1>
-        #SevenContinents
-        <small>by
-            <strong>cheeses.yard.applies</strong>
-        </small>
-    </h1>
+	</div>
+	  <!-- #3 #chat #container -->
+	<div class="right-flex-container">
+<div class="top-containerright" id="chat">
+	
+    <!--<h1 class="new-header">-->
+       <h1 class="new-header" id="hotTopic">
+        #SevenContinents 
+        <small> by
+            <strong> cheeses.yard.applies</strong>
+        </small></h1>
+   
+		</div>
 
-    <!-- #3 #chat #container -->
     <!-- #4 assign a #class to all your #messages to address them with css -->
     <!-- #4 apply a class "own" to your #messages to align them separately with #margins -->
     <div class="message own">
         <h3>
-            <!-- #3 #chat #location points to w3w in a new tab -->
+            <!-- chat #location points to w3w in a new tab -->
             <a href="http://w3w.co/cheeses.yard.applies" target="_blank">
                 <strong>cheeses.yard.applies</strong>
             </a>
             Wed, June 20th, 13:37
-            <em>15 min. left</em>
+            <em>15 min. left</em><span><button>+5 min.</button></span>
         </h3>
         <p>What's the place you folks call home?</p>
-        <button>+5 min.</button>
+        
     </div>
 
     <!-- #3 #chat #container -->
@@ -104,10 +127,10 @@
                 <strong>truck.cotton.zone</strong>
             </a>
             Wed, June 20th, 13:39
-            <em>4 min. left</em>
+            <em>4 min. left</em><span><button> +5 min.</button></span>
         </h3>
         <p>BRISBANE! Hang loose!</p>
-        <button>+5 min.</button>
+        
     </div>
 
     <!-- #3 #chat #container -->
@@ -119,10 +142,10 @@
                 <strong>thus.best.dishes</strong>
             </a>
             Wed, June 20th, 14:02
-            <em>12 min. left</em>
+			<em>12 min. left</em><span><button>+5 min.</button></span>
         </h3>
         <p>The big apple.</p>
-        <button>+5 min.</button>
+        
     </div>
 
     <!-- #3 #chat #container -->
@@ -134,10 +157,10 @@
                 <strong>driveway.helper.magazine</strong>
             </a>
             Wed, June 20th, 14:02
-            <em>7 min. left</em>
+            <em>7 min. left</em><span><button> +5 min.</button></span>
         </h3>
         <p>Eu sou um Cariocas.</p>
-        <button>+5 min.</button>
+       
     </div>
 
     <!-- #3 #chat #container -->
@@ -149,10 +172,10 @@
                 <strong>escapes.pitch.saucepan</strong>
             </a>
             Wed, June 20th, 14:07
-            <em>14 min. left</em>
+            <em>14 min. left</em><span><button> +5 min.</button></span>
         </h3>
         <p>Greetings from the western cape!</p>
-        <button>+5 min.</button>
+        
     </div>
 
     <!-- #3 #chat #container -->
@@ -164,12 +187,19 @@
                 <strong>meanings.identity.pays</strong>
             </a>
             Wed, June 20th, 04:08
-            <em>15 min. left</em>
+            <em>15 min. left</em><span><button> +5 min.</button></span>
         </h3>
         <p>北京</p>
-        <button>+5 min.</button>
+        
     </div>
+    <div id="chat-bar"><button id="emojis-button"><img src="http:/ip.lfe.mw.tum.de/sections/smile-o.png" onclick="document.getElementById('emojis').style.display = 'block';"></button>
+    <div id="emojis"> &#x1f601; &#xf602; &#xF603; &#xF604; &#xF605; </div></div>
+  
 </div>
-
+	     
+      <!--write to console -->
+      <script><button id="Writetoconsole" class="btn-square-write" onclick="console.log('App is Alive');"> </script>
+	 
+		
 </body>
 </html>
