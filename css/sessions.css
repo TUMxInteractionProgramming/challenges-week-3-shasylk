@@ -159,7 +159,7 @@ h1.new-header
 {
 	display: flex;
 	float: right;
-	margin-left: 515px;
+	margin-left: 40%;
    	position: fixed;
 	flex-direction: column;
 	height: 100%;
