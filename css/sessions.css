@@ -119,6 +119,10 @@ h1.new-header
   justify-content: space-between;
 
 }
+#sixth-container {
+  justify-content: space-between;
+
+}
 
 /* #4 add styles to #tab-bar and #chat-bar #buttons */
 #tab-bar button {
