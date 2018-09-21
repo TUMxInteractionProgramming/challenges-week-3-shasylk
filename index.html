@@ -28,7 +28,7 @@
     <script>    
 		function clickbutton()
 		{ 
-  		document.getElementById("new").style.color = blue;
+  		document.getElementById('new').style.color = blue;
     	
 		}
 		
@@ -94,19 +94,19 @@
     <div class="flex-container" id="tab-bar" onclick="highlight();">
         <!-- #4 #tab-bar - only selected channel should be #highlighted -->
         
-        <button> 
+        <button id="new" onclick="clickbutton();"> 
             <!-- #3 #tab-bar #images -->
             <img src="http://ip.lfe.mw.tum.de/sections/lightbulb-o.png" alt="Bulb">
             New
         </button>
 		
-        <button>
+        <button id="Trending" onclick="clickbutton();"> 
             <!-- #3 #tab-bar #images -->
             <img src="http://ip.lfe.mw.tum.de/sections/fire.png" alt="Hot">
             Trending
-		   </button>
+		</button>
         
-           <button>
+        <button id="Favorites" onclick="clickbutton();"> 
             <!-- #3 #tab-bar #images -->
             <img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="Star">
             Favorites
